@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_HUB_CREDENTIALS = credentials('docker-credentials')
+        DOCKER_HUB_CREDENTIALS = credentials('docker-credentials-id')
         DOCKER_IMAGE_NAME = 'prudwe/docker-pipeline-test'
         DOCKERFILE_PATH = 'Dockerfile'
     }
