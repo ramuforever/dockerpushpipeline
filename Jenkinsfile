@@ -25,7 +25,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://hub.docker.com/', "${DOCKER_HUB_CREDENTIALS}") {
+                    docker.withRegistry('https://login.docker.com/', "${DOCKER_HUB_CREDENTIALS}") {
                         docker.image("${DOCKER_IMAGE_NAME}:${BUILD_NUMBER}").push()
                     }
                 }
