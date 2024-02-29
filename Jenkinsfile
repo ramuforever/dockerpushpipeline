@@ -21,12 +21,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Print Credentials') {
-         steps {
-             echo "Docker Hub Credentials: ${DOCKER_HUB_CREDENTIALS}"
-         }
-     }
         
         stage('Push Docker Image') {
             steps {
