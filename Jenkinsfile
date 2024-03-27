@@ -3,14 +3,14 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = credentials('docker-credentials')
-        DOCKER_IMAGE_NAME = 'prudwe/docker-pipeline-test'
+        DOCKER_IMAGE_NAME = 'ramupasupuleti/docker-pipeline-test'
         DOCKERFILE_PATH = 'Dockerfile'
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/prudwe/sparkjava-war-example.git'
+                git 'https://github.com/ramuforever/dockerpushpipeline.git'
             }
         }
         
